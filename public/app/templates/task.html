@@ -1,0 +1,12 @@
+<li class=" <%= task.completed ? 'complete' : 'incomplete' %> ">
+    <label><%= task.description %></label>
+
+    <% if (task.tags !== null && task.tags.length) { %>
+        <p class="tags">
+            Tags:
+            <% _.each(task.tags, function(tag) { %>
+                <span> <%- tag %> </span>
+            <% }); %>
+        </p>
+    <% } %>
+</li>
